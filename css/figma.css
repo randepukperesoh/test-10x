@@ -1,0 +1,542 @@
+:root {
+  --bg-color: #f8fafc;
+  --text-color: #1e212c;
+  --text-color-light: #9a9ca5;
+  --text-color-medium: #787a80;
+  --hover-text-color: #424551;
+  --active-tab-color: #ff3f3a;
+  --white: #ffffff;
+  --border-color: #d7dadd;
+  --badge-marketing-color: #03cea4;
+  --badge-management-color: #5a87fc;
+  --badge-hr-color: #f89828;
+  --badge-design-color: #f52f6e;
+  --badge-development-color: #7772f1;
+  --price-color: #ff4242;
+  --card-border-color: #e5e8ed;
+  --shadow-color-1: rgba(154, 156, 165, 0.08);
+  --shadow-color-2: rgba(154, 156, 165, 0.05);
+  --shadow-color-3: rgba(154, 156, 165, 0.04);
+  --shadow-color-4: rgba(30, 33, 44, 0.03);
+
+  /* Отступы */
+  --spacing-0: 0px;
+  --spacing-xs: 1px;
+  --spacing-sm: 4px;
+  --spacing-md: 8px;
+  --spacing-lg: 12px;
+  --spacing-xl: 16px;
+  --spacing-2xl: 20px;
+  --spacing-3xl: 24px;
+  --spacing-4xl: 30px;
+  --spacing-5xl: 32px;
+  --spacing-6xl: 44px;
+  --spacing-7xl: 45px;
+
+  /* Размеры */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --border-radius-xl: 16px;
+  --font-size-xs: 10px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 24px;
+  --font-size-3xl: 32px;
+  --font-size-4xl: 46px;
+  --badge-height: 23px;
+  --image-height: 240px;
+  --search-icon-size: 16px;
+  --container-max-width: 1230px;
+  --card-min-width: 300px;
+  --card-large-min-width: 390px;
+  --divider-width: 1px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: var(--spacing-5xl);
+}
+
+.page-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-5xl);
+}
+
+.page-title h3 {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: var(--font-size-md);
+  line-height: 150%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.page-title h1 {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 900;
+  font-size: var(--font-size-4xl);
+  line-height: 130%;
+  color: var(--text-color);
+  margin: 0;
+  text-align: center;
+}
+
+.tabs-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-5xl);
+  flex-wrap: wrap;
+  gap: var(--spacing-xl);
+}
+
+.tabs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: var(--spacing-0);
+  gap: var(--spacing-lg);
+  flex-wrap: wrap;
+}
+
+.tab-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 10px;
+  min-width: 77px;
+  /* border: 1px solid var(--card-border-color); */
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  background: none;
+  outline: none;
+  text-align: center;
+}
+
+.tab-button:hover .tab-text,
+.tab-button:hover .tab-count {
+  color: var(--hover-text-color);
+}
+
+.tab-button.active {
+  background-color: var(--white);
+  border: var(--spacing-xs) solid var(--active-tab-color);
+}
+.tab-button.active .tab-text {
+  color: var(--active-tab-color);
+}
+
+.tab-button.active .tab-count {
+  color: var(--active-tab-color);
+}
+
+.inner {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: var(--spacing-0);
+  gap: var(--spacing-sm);
+}
+
+.tab-text {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: var(--font-size-md);
+  line-height: 160%;
+  color: var(--text-color-light);
+  flex: 1;
+}
+
+.tab-count {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 900;
+  font-size: var(--font-size-xs);
+  line-height: 150%;
+  color: var(--text-color-light);
+  flex: 0 0 auto;
+}
+
+.search-container {
+  min-width: 315px;
+  height: var(--spacing-6xl);
+  background: var(--white);
+  border: var(--spacing-xs) solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+#search-input {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--font-size-sm);
+  line-height: 150%;
+  color: var(--text-color-light);
+  border: none;
+  outline: none;
+  padding: 11px var(--spacing-7xl) 11px var(--spacing-xl);
+  width: 100%;
+  height: 100%;
+  border-radius: var(--border-radius-sm);
+}
+
+.search-icon {
+  position: absolute;
+  width: var(--search-icon-size);
+  height: var(--search-icon-size);
+  right: var(--spacing-xl);
+  color: var(--text-color-light);
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(var(--card-large-min-width), 1fr)
+  );
+  gap: var(--spacing-4xl);
+  margin-top: var(--spacing-2xl);
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.product-card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border: var(--spacing-xs) solid var(--card-border-color);
+  box-shadow: 0px 80px 80px -20px var(--shadow-color-1),
+    0px 30px 24px -10px var(--shadow-color-2),
+    0px 12px 10px -6px var(--shadow-color-3),
+    0px 4px 4px -4px var(--shadow-color-4);
+  border-radius: var(--border-radius-sm);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  z-index: 10;
+  view-transition-name: product-card-view;
+}
+
+.product-card:hover {
+  transform: translateY(calc(-1 * 5px));
+}
+
+.product-card img {
+  width: 100%;
+  height: var(--image-height);
+  object-fit: cover;
+  border-radius: var(--border-radius-sm) var(--border-radius-sm)
+    var(--spacing-0) var(--spacing-0);
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--spacing-3xl);
+  gap: var(--spacing-2xl);
+  width: 100%;
+}
+
+.badge {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 2px 8px;
+  gap: 10px;
+  height: var(--badge-height);
+  background: var(--badge-marketing-color); /* default to marketing color */
+  border-radius: var(--border-radius-sm);
+}
+
+.badge span {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--font-size-sm);
+  line-height: 150%;
+  color: var(--white);
+  white-space: nowrap;
+}
+
+.marketing-badge {
+  background: var(--badge-marketing-color); /* success */
+}
+
+.management-badge {
+  background: var(--badge-management-color); /* info */
+}
+
+.hr-badge {
+  background: var(--badge-hr-color); /* warning */
+}
+
+.design-badge {
+  background: var(--badge-design-color); /* danger */
+}
+
+.development-badge {
+  background: var(--badge-development-color); /* secondary */
+}
+
+.product-card h3 {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: var(--font-size-xl);
+  line-height: 150%;
+  color: var(--text-color);
+  margin: 0;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: var(--spacing-0);
+  gap: var(--spacing-md);
+  width: 100%;
+}
+
+.price {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: var(--font-size-lg);
+  line-height: 150%;
+  color: var(--price-color);
+  min-width: 42px;
+}
+
+.divider {
+  height: var(--divider-width);
+  border: var(--divider-width) solid var(--text-color-medium);
+  transform: rotate(90deg);
+  min-width: var(--spacing-xl);
+}
+
+.speaker {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--font-size-lg);
+  line-height: 150%;
+  color: var(--text-color-medium);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--card-min-width), 1fr));
+  gap: var(--spacing-4xl);
+  margin-top: var(--spacing-2xl);
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+  .courses-grid,
+  .products-grid {
+    grid-template-columns: repeat(auto-fit, minmax(var(--card-min-width), 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .tabs-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-container {
+    min-width: auto;
+  }
+
+  .tabs {
+    justify-content: center;
+  }
+
+  .page-title h1 {
+    font-size: var(--font-size-3xl);
+  }
+
+  .page-title h3 {
+    font-size: var(--font-size-sm);
+  }
+
+  .courses-grid,
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    padding: var(--spacing-2xl) var(--spacing-xl);
+  }
+}
+
+/* View Transitions API styles */
+@keyframes slideFromRight {
+  from {
+    transform: translateX(var(--spacing-4xl));
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideToLeft {
+  from {
+    transform: translateX(calc(-1 * var(--spacing-4xl)));
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromTop {
+  from {
+    transform: translateY(calc(-1 * var(--spacing-4xl)));
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromBottom {
+  from {
+    transform: translateY(var(--spacing-4xl));
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+::view-transition-old(product-card-view) {
+  animation: 0.25s ease-out both fade-out, 0.25s ease-out both slide-out;
+}
+
+::view-transition-new(product-card-view) {
+  animation: 0.25s ease-out 0.05s both fade-in,
+    0.25s ease-out 0.05s both slide-in;
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slide-out {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.95);
+  }
+}
+@keyframes slide-in {
+  from {
+    transform: scale(0.95);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.background-dots {
+  position: absolute;
+  right: 0;
+  top: 50px;
+  z-index: 1;
+}
+
+.background-shapes {
+  position: absolute;
+  right: 72px;
+  top: 1104px;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .background-dots {
+    top: 420px;
+  }
+}
+
+.background-shapesRounded {
+  position: absolute;
+  left: 56px;
+  top: 687px;
+  z-index: 1;
+}
+
+.pagination {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+  padding: 4rem 0 0;
+
+  font-family: Lato;
+  font-weight: 700;
+  font-size: var(--font-size-md);
+  line-height: 160%;
+  vertical-align: middle;
+  color: var(--hover-text-color);
+}

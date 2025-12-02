@@ -1,0 +1,860 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test 10x</title>
+    <link rel="stylesheet" href="css/figma.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <div class="page-title">
+        <h3>Enjoy your studying!</h3>
+        <h1>Our online courses</h1>
+      </div>
+
+      <div class="tabs-container">
+        <div class="tabs">
+          <div class="tab-button active" data-tab="all">
+            <div class="inner">
+              <span class="tab-text">All</span>
+              <span class="tab-count">8</span>
+            </div>
+          </div>
+          <div class="tab-button" data-tab="marketing">
+            <div class="inner">
+              <span class="tab-text">Marketing</span>
+              <span class="tab-count">8</span>
+            </div>
+          </div>
+          <div class="tab-button" data-tab="management">
+            <div class="inner">
+              <span class="tab-text">Management</span>
+              <span class="tab-count">8</span>
+            </div>
+          </div>
+          <div class="tab-button" data-tab="hr">
+            <div class="inner">
+              <span class="tab-text">HR & Recruting</span>
+              <span class="tab-count">8</span>
+            </div>
+          </div>
+          <div class="tab-button" data-tab="design">
+            <div class="inner">
+              <span class="tab-text">Design</span>
+              <span class="tab-count">8</span>
+            </div>
+          </div>
+          <div class="tab-button" data-tab="development">
+            <div class="inner">
+              <span class="tab-text">Development</span>
+              <span class="tab-count">8</span>
+            </div>
+          </div>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-input" placeholder="Search course..." />
+          <div class="search-icon"><img src='images/search.svg'/></div>
+        </div>
+      </div>
+      
+      <div class="courses-grid">
+        <div class="tab-content active" id="all">
+          <div class="products-grid">
+            <div class="product-card">
+              <img
+                src="images/1.jpg"
+                alt="Marketing fundamentals course"
+              />
+              <div class="card-content">
+                <div class="badge marketing-badge">
+                  <span>Management</span>
+                </div>
+                <h3>Brand Management & PR Communications</h3>
+                <div class="info">
+                  <span class="price">$490</span>
+                  <div class="divider"></div>
+                  <span class="speaker">by Kristin Watson</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <img
+                src="images/2.jpg"
+                alt="Digital marketing course"
+              />
+              <div class="card-content">
+                <div class="badge design-badge">
+                  <span>Design</span>
+                </div>
+                <h3>Graphic Design Basic</h3>
+                <div class="info">
+                  <span class="price">$690</span>
+                  <div class="divider"></div>
+                  <span class="speaker">by Guy Hawkins</span>
+                </div>
+              </div>
+            </div>
+            <div class="product-card">
+              <img src="images/3.jpg" alt="Branding course" />
+              <div class="card-content">
+                <div class="badge hr-badge">
+                  <span>HR & Recruting</span>
+                </div>
+                <h3>HR Management and Analytics</h3>
+                <div class="info">
+                  <span class="price">$790</span>
+                  <div class="divider"></div>
+                  <span class="speaker">by Cody Fisher</span>
+                </div>
+              </div>
+            </div>
+            <div class="product-card">
+              <img
+                src="images/4.jpg"
+                alt="Data analysis course"
+              />
+              <div class="card-content">
+                <div class="badge management-badge">
+                  <span>Management</span>
+                </div>
+                <h3>Product Management Fundamentals</h3>
+                <div class="info">
+                  <span class="price">$590</span>
+                  <div class="divider"></div>
+                  <span class="speaker">by Dianne Russell</span>
+                </div>
+              </div>
+            </div>
+            <div class="product-card">
+              <img
+                src="images/5.jpg"
+                alt="Product management course"
+              />
+              <div class="card-content">
+                <div class="badge marketing-badge">
+                  <span>Marketing</span>
+                </div>
+                <h3>Brand Management & PR Communications</h3>
+                <div class="info">
+                  <span class="price">$890</span>
+                  <div class="divider"></div>
+                  <span class="speaker">by Kristin Watson</span>
+                </div>
+              </div>
+            </div>
+            <div class="product-card">
+              <img src="images/6.jpg" alt="UX design course" />
+              <div class="card-content">
+                <div class="badge design-badge">
+                  <span>Design</span>
+                </div>
+                <h3>Graphic Design Basic</h3>
+                <div class="info">
+                  <span class="price">$640</span>
+                  <div class="divider"></div>
+                  <span class="speaker">by Guy Hawkins</span>
+                </div>
+              </div>
+            </div>
+            <div class="product-card">
+              <img
+                src="images/7.jpg"
+                alt="Project management course"
+              />
+              <div class="card-content">
+                <div class="badge management-badge">
+                  <span>Management</span>
+                </div>
+                <h3>Business Development Management</h3>
+                <div class="info">
+                  <span class="price">$540</span>
+                  <div class="divider"></div>
+                  <span class="speaker">by Dianne Russell</span>
+                </div>
+              </div>
+            </div>
+            <div class="product-card">
+              <img src="images/8.jpg" alt="Recruitment course" />
+              <div class="card-content">
+                <div class="badge hr-badge">
+                  <span>HR & Recruting</span>
+                </div>
+                <h3>Human Resources Selection and Recruitment</h3>
+                <div class="info">
+                  <span class="price">$440</span>
+                  <div class="divider"></div>
+                  <span class="speaker">by Cody Fisher</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <div class="tab-content" id="marketing">
+        <div class="products-grid">
+          <div class="product-card">
+            <img
+              src="images/1.jpg"
+              alt="Marketing fundamentals course"
+            />
+            <div class="card-content">
+              <div class="badge marketing-badge">
+                <span>Marketing</span>
+              </div>
+              <h3>Marketing Fundamentals</h3>
+              <div class="info">
+                <span class="price">$490</span>
+                <div class="divider"></div>
+                <span class="speaker">by Kristin Watson</span>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img
+              src="images/2.jpg"
+              alt="Digital marketing course"
+            />
+            <div class="card-content">
+              <div class="badge marketing-badge">
+                <span>Marketing</span>
+              </div>
+              <h3>Digital Marketing</h3>
+              <div class="info">
+                <span class="price">$690</span>
+                <div class="divider"></div>
+                <span class="speaker">by Leslie Alexander Li</span>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img
+              src="images/3.jpg"
+              alt="Social media marketing course"
+            />
+            <div class="card-content">
+              <div class="badge marketing-badge">
+                <span>Marketing</span>
+              </div>
+              <h3>Social Media Marketing</h3>
+              <div class="info">
+                <span class="price">$540</span>
+                <div class="divider"></div>
+                <span class="speaker">by Kristin Watson</span>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img
+              src="images/4.jpg"
+              alt="Contextual advertising course"
+            />
+            <div class="card-content">
+              <div class="badge marketing-badge">
+                <span>Marketing</span>
+              </div>
+              <h3>Contextual Advertising</h3>
+              <div class="info">
+                <span class="price">$640</span>
+                <div class="divider"></div>
+                <span class="speaker">by Leslie Alexander Li</span>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img
+              src="images/5.jpg"
+              alt="Email marketing course"
+            />
+            <div class="card-content">
+              <div class="badge marketing-badge">
+                <span>Marketing</span>
+              </div>
+              <h3>Email Marketing</h3>
+              <div class="info">
+                <span class="price">$590</span>
+                <div class="divider"></div>
+                <span class="speaker">by Kristin Watson</span>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images/6.jpg" alt="ROI analysis course" />
+            <div class="card-content">
+              <div class="badge marketing-badge">
+                <span>Marketing</span>
+              </div>
+              <h3>ROI Analysis</h3>
+              <div class="info">
+                <span class="price">$690</span>
+                <div class="divider"></div>
+                <span class="speaker">by Leslie Alexander Li</span>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images/7.jpg" alt="Branding course" />
+            <div class="card-content">
+              <div class="badge marketing-badge">
+                <span>Marketing</span>
+              </div>
+              <h3>Branding</h3>
+              <div class="info">
+                <span class="price">$790</span>
+                <div class="divider"></div>
+                <span class="speaker">by Kristin Watson</span>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img
+              src="images/8.jpg"
+              alt="Market research course"
+            />
+            <div class="card-content">
+              <div class="badge marketing-badge">
+                <span>Marketing</span>
+              </div>
+              <h3>Market Research</h3>
+              <div class="info">
+                <span class="price">$540</span>
+                <div class="divider"></div>
+                <span class="speaker">by Leslie Alexander Li</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="management">
+        <div class="products-grid">
+          <div class="product-card">
+            <img
+              src="images/1.jpg"
+              alt="Team management course"
+            />
+            <div class="card-content">
+              <div class="badge management-badge">
+                <span>Management</span>
+              </div>
+              <h3>Team Management</h3>
+              <div class="info">
+                <span class="price">$590</span>
+                <div class="divider"></div>
+                <span class="speaker">by Marvin McKinney</span>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img
+              src="images/2.jpg"
+              alt="Strategic planning course"
+            />
+            <div class="card-content">
+              <div class="badge management-badge">
+                <span>Management</span>
+              </div>
+              <h3>Strategic Planning</h3>
+              <div class="info">
+                <span class="price">$740</span>
+                <div class="divider"></div>
+                <span class="speaker">by Dianne Russell</span>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img
+              src="images/3.jpg"
+              alt="Financial management course"
+            />
+            <div class="card-content">
+              <div class="badge management-badge">
+                <span>Management</span>
+              </div>
+              <h3>Financial Management</h3>
+              <div class="info">
+                <span class="price">$690</span>
+                <div class="divider"></div>
+                <span class="speaker">by Marvin McKinney</span>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img
+              src="images/4.jpg"
+              alt="Project management course"
+            />
+            <div class="card-content">
+              <div class="badge management-badge">
+                <span>Management</span>
+              </div>
+              <h3>Project Management</h3>
+              <div class="info">
+                <span class="price">$540</span>
+                <div class="divider"></div>
+                <span class="speaker">by Dianne Russell</span>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images/5.jpg" alt="Leadership course" />
+            <div class="card-content">
+              <div class="badge management-badge">
+                <span>Management</span>
+              </div>
+              <h3>Leadership</h3>
+              <div class="info">
+                <span class="price">$640</span>
+                <div class="divider"></div>
+                <span class="speaker">by Marvin McKinney</span>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img
+              src="images/6.jpg"
+              alt="Business communications course"
+            />
+            <div class="card-content">
+              <div class="badge management-badge">
+                <span>Management</span>
+              </div>
+              <h3>Business Communications</h3>
+              <div class="info">
+                <span class="price">$490</span>
+                <div class="divider"></div>
+                <span class="speaker">by Dianne Russell</span>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img
+              src="images/7.jpg"
+              alt="Business analytics course"
+            />
+            <div class="card-content">
+              <div class="badge management-badge">
+                <span>Management</span>
+              </div>
+              <h3>Business Analytics</h3>
+              <div class="info">
+                <span class="price">$690</span>
+                <div class="divider"></div>
+                <span class="speaker">by Marvin McKinney</span>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img
+              src="images/8.jpg"
+              alt="Organizational psychology course"
+            />
+            <div class="card-content">
+              <div class="badge management-badge">
+                <span>Management</span>
+              </div>
+              <h3>Organizational Psychology</h3>
+              <div class="info">
+                <span class="price">$540</span>
+                <div class="divider"></div>
+                <span class="speaker">by Dianne Russell</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="hr">
+        <div class="products-grid">
+          <div class="product-card">
+            <img src="images/1.jpg" alt="HR fundamentals course" />
+            <div class="card-content">
+              <div class="badge hr-badge">
+                <span>HR & Recruting</span>
+              </div>
+              <h3>HR Fundamentals</h3>
+              <div class="info">
+                <span class="price">$440</span>
+                <div class="divider"></div>
+                <span class="speaker">by Cody Fisher</span>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images/2.jpg" alt="Recruitment course" />
+            <div class="card-content">
+              <div class="badge hr-badge">
+                <span>HR & Recruting</span>
+              </div>
+              <h3>Recruitment</h3>
+              <div class="info">
+                <span class="price">$540</span>
+                <div class="divider"></div>
+                <span class="speaker">by Kathryn Murphy</span>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img
+              src="images/3.jpg"
+              alt="Personnel evaluation course"
+            />
+            <div class="card-content">
+              <div class="badge hr-badge">
+                <span>HR & Recruting</span>
+              </div>
+              <h3>Personnel Evaluation</h3>
+              <div class="info">
+                <span class="price">$490</span>
+                <div class="divider"></div>
+                <span class="speaker">by Cody Fisher</span>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images/4.jpg" alt="HR analytics course" />
+            <div class="card-content">
+              <div class="badge hr-badge">
+                <span>HR & Recruting</span>
+              </div>
+              <h3>HR Analytics</h3>
+              <div class="info">
+                <span class="price">$640</span>
+                <div class="divider"></div>
+                <span class="speaker">by Kathryn Murphy</span>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img
+              src="images/5.jpg"
+              alt="Employee motivation course"
+            />
+            <div class="card-content">
+              <div class="badge hr-badge">
+                <span>HR & Recruting</span>
+              </div>
+              <h3>Employee Motivation</h3>
+              <div class="info">
+                <span class="price">$590</span>
+                <div class="divider"></div>
+                <span class="speaker">by Cody Fisher</span>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img
+              src="images/6.jpg"
+              alt="Corporate culture course"
+            />
+            <div class="card-content">
+              <div class="badge hr-badge">
+                <span>HR & Recruting</span>
+              </div>
+              <h3>Corporate Culture</h3>
+              <div class="info">
+                <span class="price">$540</span>
+                <div class="divider"></div>
+                <span class="speaker">by Kathryn Murphy</span>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img
+              src="images/7.jpg"
+              alt="Training and development course"
+            />
+            <div class="card-content">
+              <div class="badge hr-badge">
+                <span>HR & Recruting</span>
+              </div>
+              <h3>Training and Development</h3>
+              <div class="info">
+                <span class="price">$690</span>
+                <div class="divider"></div>
+                <span class="speaker">by Cody Fisher</span>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img
+              src="images/8.jpg"
+              alt="Compensation management course"
+            />
+            <div class="card-content">
+              <div class="badge hr-badge">
+                <span>HR & Recruting</span>
+              </div>
+              <h3>Compensation Management</h3>
+              <div class="info">
+                <span class="price">$690</span>
+                <div class="divider"></div>
+                <span class="speaker">by Kathryn Murphy</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="design">
+        <div class="products-grid">
+          <div class="product-card">
+            <img src="images/1.jpg" alt="UI/UX fundamentals course" />
+            <div class="card-content">
+              <div class="badge design-badge">
+                <span>Design</span>
+              </div>
+              <h3>UI/UX Fundamentals</h3>
+              <div class="info">
+                <span class="price">$590</span>
+                <div class="divider"></div>
+                <span class="speaker">by Guy Hawkins</span>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img
+              src="images/2.jpg"
+              alt="Adobe Creative Suite"
+            />
+            <div class="card-content">
+              <div class="badge design-badge">
+                <span>Design</span>
+              </div>
+              <h3>Adobe Creative Suite</h3>
+              <div class="info">
+                <span class="price">$740</span>
+                <div class="divider"></div>
+                <span class="speaker">by Brooklyn Simmons</span>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images/3.jpg" alt="Web design course" />
+            <div class="card-content">
+              <div class="badge design-badge">
+                <span>Design</span>
+              </div>
+              <h3>Web Design</h3>
+              <div class="info">
+                <span class="price">$640</span>
+                <div class="divider"></div>
+                <span class="speaker">by Guy Hawkins</span>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img
+              src="images/4.jpg"
+              alt="Prototyping course"
+            />
+            <div class="card-content">
+              <div class="badge design-badge">
+                <span>Design</span>
+              </div>
+              <h3>Prototyping</h3>
+              <div class="info">
+                <span class="price">$540</span>
+                <div class="divider"></div>
+                <span class="speaker">by Brooklyn Simmons</span>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img
+              src="images/5.jpg"
+              alt="Mobile design course"
+            />
+            <div class="card-content">
+              <div class="badge design-badge">
+                <span>Design</span>
+              </div>
+              <h3>Mobile Design</h3>
+              <div class="info">
+                <span class="price">$690</span>
+                <div class="divider"></div>
+                <span class="speaker">by Guy Hawkins</span>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images/6.jpg" alt="Branding course" />
+            <div class="card-content">
+              <div class="badge design-badge">
+                <span>Design</span>
+              </div>
+              <h3>Branding</h3>
+              <div class="info">
+                <span class="price">$790</span>
+                <div class="divider"></div>
+                <span class="speaker">by Brooklyn Simmons</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img src="images/7.jpg" alt="Illustration course" />
+            <div class="card-content">
+              <div class="badge design-badge">
+                <span>Design</span>
+              </div>
+              <h3>Illustration</h3>
+              <div class="info">
+                <span class="price">$590</span>
+                <div class="divider"></div>
+                <span class="speaker">by Guy Hawkins</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img src="images/8.jpg" alt="Typography course" />
+            <div class="card-content">
+              <div class="badge design-badge">
+                <span>Design</span>
+              </div>
+              <h3>Typography</h3>
+              <div class="info">
+                <span class="price">$490</span>
+                <div class="divider"></div>
+                <span class="speaker">by Brooklyn Simmons</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img src="images/7.jpg" alt="Illustration course" />
+            <div class="card-content">
+              <div class="badge design-badge">
+                <span>Design</span>
+              </div>
+              <h3>Illustration</h3>
+              <div class="info">
+                <span class="price">$590</span>
+                <div class="divider"></div>
+                <span class="speaker">by Guy Hawkins</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="development">
+        <div class="products-grid">
+          <div class="product-card">
+            <img src="images/1.jpg" alt="JavaScript" />
+            <div class="card-content">
+              <div class="badge development-badge">
+                <span>Development</span>
+              </div>
+              <h3>JavaScript</h3>
+              <div class="info">
+                <span class="price">$690</span>
+                <div class="divider"></div>
+                <span class="speaker">by Brooklyn Simmons</span>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images/1.jpg" alt="Python" />
+            <div class="card-content">
+              <div class="badge development-badge">
+                <span>Development</span>
+              </div>
+              <h3>Python</h3>
+              <div class="info">
+                <span class="price">$640</span>
+                <div class="divider"></div>
+                <span class="speaker">by Cody Fisher</span>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img
+              src="images/1.jpg"
+              alt="Web development course"
+            />
+            <div class="card-content">
+              <div class="badge development-badge">
+                <span>Development</span>
+              </div>
+              <h3>Web Development</h3>
+              <div class="info">
+                <span class="price">$790</span>
+                <div class="divider"></div>
+                <span class="speaker">by Brooklyn Simmons</span>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images/1.jpg" alt="React" />
+            <div class="card-content">
+              <div class="badge development-badge">
+                <span>Development</span>
+              </div>
+              <h3>React</h3>
+              <div class="info">
+                <span class="price">$740</span>
+                <div class="divider"></div>
+                <span class="speaker">by Cody Fisher</span>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images/1.jpg" alt="Node.js" />
+            <div class="card-content">
+              <div class="badge development-badge">
+                <span>Development</span>
+              </div>
+              <h3>Node.js</h3>
+              <div class="info">
+                <span class="price">$690</span>
+                <div class="divider"></div>
+                <span class="speaker">by Brooklyn Simmons</span>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images/1.jpg" alt="Database course" />
+            <div class="card-content">
+              <div class="badge development-badge">
+                <span>Development</span>
+              </div>
+              <h3>Databases</h3>
+              <div class="info">
+                <span class="price">$590</span>
+                <div class="divider"></div>
+                <span class="speaker">by Cody Fisher</span>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images/1.jpg" alt="Git and DevOps course" />
+            <div class="card-content">
+              <div class="badge development-badge">
+                <span>Development</span>
+              </div>
+              <h3>Git and DevOps</h3>
+              <div class="info">
+                <span class="price">$540</span>
+                <div class="divider"></div>
+                <span class="speaker">by Brooklyn Simmons</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="background-dots"><img src='images/dots.png'/></div>
+      <div class="background-shapes"><img src='images/shapes.png'/></div>
+      <div class="background-shapesRounded"><img src='images/shapesRounded.png'/></div>
+
+    </div>
+    <div class="pagination"><img src="images/convert.svg"/><span>Load more</span></div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
