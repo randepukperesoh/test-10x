@@ -58,6 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Function to filter cards
   function filterCards(category, searchTerm = '') {
     const allCards = document.querySelectorAll('.product-card');
+    let visibleCount = 0;
 
     allCards.forEach(card => {
       const cardCategory = card.getAttribute('data-category') || 'all';
@@ -71,10 +72,66 @@ document.addEventListener('DOMContentLoaded', function() {
 
       if (matchesCategory && matchesSearch) {
         card.style.display = 'flex'; // Show card
+        visibleCount++;
       } else {
         card.style.display = 'none'; // Hide card
       }
     });
+
+    // Show or hide the "no cards" message
+    showNoCardsMessage(visibleCount === 0);
+  }
+
+  // Function to show/hide "no cards" message
+  function showNoCardsMessage(show) {
+    // Find the products grid container
+    const productsGrid = document.querySelector('#all .products-grid');
+
+    // Find the pagination/load more element
+    const paginationElement = document.querySelector('.pagination');
+
+    if (!productsGrid) return; // If we don't have the products grid, exit
+
+    let noCardsMessage = document.getElementById('no-cards-message');
+
+    if (show) {
+      if (!noCardsMessage) {
+        // Create the message element if it doesn't exist
+        noCardsMessage = document.createElement('div');
+        noCardsMessage.id = 'no-cards-message';
+        noCardsMessage.className = 'no-cards-message';
+        noCardsMessage.textContent = 'Нет подходящих карточек';
+
+        // Add some basic styling
+        noCardsMessage.style.cssText = `
+          grid-column: 1 / -1;
+          text-align: center;
+          padding: 40px 20px;
+          font-size: 18px;
+          color: #666;
+          font-weight: 400;
+        `;
+
+        // Insert into the products grid container
+        productsGrid.appendChild(noCardsMessage);
+      } else {
+        noCardsMessage.style.display = 'block';
+      }
+
+      // Hide the pagination/load more element when no cards are found
+      if (paginationElement) {
+        paginationElement.style.display = 'none';
+      }
+    } else {
+      if (noCardsMessage) {
+        noCardsMessage.style.display = 'none';
+      }
+
+      // Show the pagination/load more element when cards are found
+      if (paginationElement) {
+        paginationElement.style.display = 'flex';
+      }
+    }
   }
 
   // Tab button event listeners
@@ -97,6 +154,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Update tab counts after cards are processed
   updateTabCounts();
+
+  // Hide "no cards" message on initialization since we're showing all cards
+  showNoCardsMessage(false);
 
   // Function to shuffle cards
   function shuffleCards() {
